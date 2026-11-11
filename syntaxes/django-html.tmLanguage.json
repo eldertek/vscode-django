@@ -54,7 +54,7 @@
           }
         },
         {
-          "begin": "({%)\\s*(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|comment|endcomment|debug|extends|filter|firstof|for|empty|endfor|if|elif|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|verbatim|endverbatim|lorem|thumbnail|endthumbnail|get_static_prefix)\\b",
+          "begin": "({%)\\s*(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|translate|endtranslate|blocktranslate|endblocktranslate|plural|comment|endcomment|debug|extends|filter|firstof|for|empty|endfor|if|elif|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|from|low|regroup|resetcycle|ssi|spaceless|endspaceless|static|templatetag|widthratio|with|endwith|csrf_token|cycle|querystring|url|verbatim|endverbatim|lorem|thumbnail|endthumbnail|get_static_prefix)\\b",
           "end": "(%})",
           "name": "storage.type.templatetag.django",
           "patterns": [
@@ -463,6 +463,9 @@
             },
             {
               "include": "source.css.django"
+            },
+            {
+              "include": "source.css"
             }
           ],
           "beginCaptures": {

@@ -2,7 +2,7 @@
   "name": "vscode-django",
   "displayName": "Django",
   "description": "Beautiful syntax and scoped snippets for perfectionists with deadlines",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "publisher": "batisteo",
   "license": "MIT",
   "icon": "images/vscode-django-icon.png",
@@ -11,11 +11,20 @@
     "theme": "dark"
   },
   "engines": {
-    "vscode": "^1.49.0"
+    "vscode": "^1.75.0"
   },
-  "recommendations": ["ms-python.python"],
-  "keywords": ["python", "django", "web"],
-  "categories": ["Programming Languages", "Snippets"],
+  "recommendations": [
+    "ms-python.python"
+  ],
+  "keywords": [
+    "python",
+    "django",
+    "web"
+  ],
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
   "homepage": "https://github.com/vscode-django/vscode-django",
   "repository": {
     "type": "git",
@@ -74,15 +83,25 @@
     "languages": [
       {
         "id": "django-html",
-        "aliases": ["Django HTML", "django"],
-        "filenamePatterns": ["**/templates/**/*.html"],
+        "aliases": [
+          "Django HTML",
+          "django"
+        ],
+        "filenamePatterns": [
+          "**/templates/**/*.html"
+        ],
         "firstLine": "{%",
         "configuration": "./language-configuration.json"
       },
       {
         "id": "django-txt",
-        "aliases": ["Django txt", "django"],
-        "filenamePatterns": ["**/templates/**/*"],
+        "aliases": [
+          "Django txt",
+          "django"
+        ],
+        "filenamePatterns": [
+          "**/templates/**/*"
+        ],
         "firstLine": "{%",
         "configuration": "./language-configuration.json"
       }
@@ -137,7 +156,10 @@
         },
         "django.snippets.exclude": {
           "type": "array",
-          "default": ["cms", "wagtail"],
+          "default": [
+            "cms",
+            "wagtail"
+          ],
           "description": "Exclude Python snippets by their file name. Can be 'import', 'postgres'..."
         },
         "django.i18n": {
@@ -152,5 +174,8 @@
         }
       }
     }
+  },
+  "sponsor": {
+    "url": "https://www.patreon.com/eldertek"
   }
 }

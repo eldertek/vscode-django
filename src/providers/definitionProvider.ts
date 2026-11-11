@@ -40,16 +40,18 @@ export class TemplatePathProvider implements DefinitionProvider {
 
         if (relative_match) {
             path = relative_match[1]
-            search = workspace.asRelativePath(resolve(dirname(document.uri.path), path))
+            const baseDir = document.uri.fsPath ? dirname(document.uri.fsPath) : dirname(document.uri.path)
+            search = workspace.asRelativePath(resolve(baseDir, path))
         } else if (match) {
             path = match[1]
-            search = `**/{templates,jinja2}/${path}`
+            search = `**/{templates,jinja2,cotton}/${path}`
         } else {
             return Promise.resolve(null)
         }
 
         let pos = position.character
-        let cursorOverPath = pos > line.indexOf(path) && pos < line.indexOf(path) + path.length
+        let idx = line.indexOf(path)
+        let cursorOverPath = idx !== -1 && pos >= idx && pos <= idx + path.length
 
         let uri: Thenable<Uri | null>
 
